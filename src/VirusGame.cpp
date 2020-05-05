@@ -44,11 +44,11 @@ int main()
         }
         const Uint8* keyboardState=SDL_GetKeyboardState(NULL); // get keyboard state
 
-        player.keyboard(keyboardState);
+        player.keyboard(keyboardState); // handle player
         player.step(mySDL);
         player.draw(mySDL);
         
-        if (rand_0_1()<new_virus_chance && nr_viruses<max_nr_viruses)
+        if (rand_0_1()<new_virus_chance && nr_viruses<max_nr_viruses) // create new virus
         {
             Coord window_size=mySDL.size();
             Coord pos=Coord(window_size.x * rand_0_1(),
@@ -58,17 +58,16 @@ int main()
             viruses[nr_viruses]=Virus(pos,speed);
             nr_viruses+=1;
         }
-        for (int i=0;i<nr_viruses;i++)
+        for (int i=0;i<nr_viruses;i++) // handle all viruses
         {
             viruses[i].step(mySDL);
             viruses[i].draw(mySDL);
         }
         
-        SDL_RenderPresent(mySDL.renderer());
+        SDL_RenderPresent(mySDL.renderer()); // update graphics window
         int frame_ticks=SDL_GetTicks()-ticks_start;
         if( frame_ticks < SCREEN_TICKS_PER_FRAME ) SDL_Delay( SCREEN_TICKS_PER_FRAME - frame_ticks ); // delay for right framerate
     }
-    
     return 0;
 }
 
