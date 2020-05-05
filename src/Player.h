@@ -30,9 +30,9 @@ public:
     void step(MySDL& mySDL)
     {
         pos+=speed;
-        if (pos.x<0 or pos.x>mySDL.size().x)
+        if (pos.x<0 || pos.x>mySDL.size().x)
         { speed.x=-speed.x; }
-        if (pos.y<0 or pos.y>mySDL.size().y)
+        if (pos.y<0 || pos.y>mySDL.size().y)
         { speed.y=-speed.y; }
     }
 

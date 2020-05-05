@@ -10,7 +10,7 @@ struct Coord
     
     Coord(double x,double y) : x{x},y{y}
     {}
-    
+
     Coord& operator+=(const Coord& c)
     { x+=c.x; y+=c.y; return *this; }
     

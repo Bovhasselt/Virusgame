@@ -2,6 +2,7 @@
 #define UTILS_INCLUDED
 
 #include <stdlib.h>
+#include <time.h>
 #include <iostream>
 
 double rand_0_1()

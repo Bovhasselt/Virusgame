@@ -8,7 +8,8 @@
 const int SCREEN_FPS = 60;
 const int SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
 
-int main()
+//int main()
+extern "C" int main(int argc, char* argv[])
 {
     srand(time(NULL)); // seed speudo random number generator 
     MySDL mySDL("VirusGame"); // create DSL graphics window
