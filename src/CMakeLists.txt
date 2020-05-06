@@ -11,3 +11,4 @@ include_directories(${SYSTEM_INCLUDE_DIR})
 
 add_executable(VirusGame VirusGame.cpp)
 target_link_libraries(VirusGame PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2::SDL2_gfx)
+#target_link_libraries(VirusGame PRIVATE SDL2::Main SDL2::GFX)
