@@ -1,9 +1,13 @@
 # README #
-VirusGame
+
+VirusGame, a simple game build using the SDL2 graphics library. Use
+the cursur keys to move and escape/kill the viruses.
+
+![Alt text](VirusGame.png)
 
 ## Install
 
-# Linux/Mac:
+### Linux/Mac:
 
 Using the package manager on your system install:
 
@@ -24,7 +28,7 @@ Then
     make
     ./VirusGame
 
-# Windows:
+### Windows:
 
 Install [git](https://git-scm.com/download/win) and clone
 [VirusGame](https://bitbucket.org/bterwijn/virusgame/src/master).
@@ -44,7 +48,7 @@ To install the SDL2 graphics library use
     .\vcpkg.exe install sdl2-gfx --triplet x64-windows
 
 Then in Visual Studio Studio Community 2019 open the virusgame/src
-folder and build the project.
+folder and build the project (F7) and run it (F5).
 
 
 ## Author
