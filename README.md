@@ -1,7 +1,6 @@
-# README #
-
-VirusGame, a simple game build using the SDL2 graphics library. Use
-the cursur keys to move and escape/kill the viruses.
+# VirusGame #
+A simple game build using the SDL2 graphics library. Use
+the cursur keys to move to escape/kill the viruses.
 
 ![Alt text](VirusGame.png)
 
@@ -16,9 +15,9 @@ Using the package manager on your system install:
     libsdl2-dev
     libsdl2-gfx-dev
 
-For Ubuntu use: sudo apt install cmake git libsdl2-dev libsdl2-gfx-dev
+For example for Ubuntu use: sudo apt install cmake git libsdl2-dev libsdl2-gfx-dev
 
-Then 
+Then:
 
     git clone https://bterwijn@bitbucket.org/bterwijn/virusgame.git
     cd VirusGame/src
@@ -35,9 +34,10 @@ Install [git](https://git-scm.com/download/win) and clone
 
 Install [Visual Studio Studio Community
 2019](https://visualstudio.microsoft.com/) and in the Visual Studio
-Installer install Worksload "Desktop development with C++".
+Installer install Worksload "Desktop development with C++" (includes
+CMake).
 
-To install the SDL2 graphics library use
+Install the SDL2 graphics library use
 [vcpkg](https://github.com/Microsoft/vcpkg) by using:
 
     git clone https://github.com/Microsoft/vcpkg.git
@@ -52,4 +52,4 @@ folder and build the project (F7) and run it (F5).
 
 
 ## Author
-Bas Terwijn <b.terwijn@uva.nl>
+Bas Terwijn <<b.terwijn@uva.nl>>
