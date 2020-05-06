@@ -1,48 +1,51 @@
 # README #
+VirusGame
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Install
 
-Windows:
+# Linux/Mac:
 
-git, https://git-scm.com/download/win
+Using the package manager on your system install:
 
-Visual Studio Studio Community 2019, https://visualstudio.microsoft.com/
+    cmake
+    git
+    libsdl2-dev
+    libsdl2-gfx-dev
 
-In Visual Studio Installer, Worksloads:
-Desktop development with C++
+For Ubuntu use: sudo apt install cmake git libsdl2-dev libsdl2-gfx-dev
 
-vcpkg, https://github.com/Microsoft/vcpkg
-git clone https://github.com/Microsoft/vcpkg.git
-cd vcpkg
-.\bootstrap-vcpkg.bat
-.\vcpkg.exe integrate install
-.\vcpkg.exe install sdl2
-.\vcpkg.exe install sdl2-gfx --triplet x64-windows
+Then 
+
+    git clone https://bterwijn@bitbucket.org/bterwijn/virusgame.git
+    cd VirusGame/src
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ./VirusGame
+
+# Windows:
+
+Install [git](https://git-scm.com/download/win) and clone
+[VirusGame](https://bitbucket.org/bterwijn/virusgame/src/master).
+
+Install [Visual Studio Studio Community
+2019](https://visualstudio.microsoft.com/) and in the Visual Studio
+Installer install Worksload "Desktop development with C++".
+
+To install the SDL2 graphics library use
+[vcpkg](https://github.com/Microsoft/vcpkg) by using:
+
+    git clone https://github.com/Microsoft/vcpkg.git
+    cd vcpkg
+    .\bootstrap-vcpkg.bat
+    .\vcpkg.exe integrate install
+    .\vcpkg.exe install sdl2
+    .\vcpkg.exe install sdl2-gfx --triplet x64-windows
+
+Then in Visual Studio Studio Community 2019 open the virusgame/src
+folder and build the project.
 
 
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+## Author
+Bas Terwijn <b.terwijn@uva.nl>
