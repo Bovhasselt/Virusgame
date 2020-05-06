@@ -8,19 +8,21 @@ the cursur keys to move to escape/kill the viruses.
 
 ### Linux/Mac:
 
-Using the package manager on your system install:
+Using the package manager on your system to install:
 
     cmake
     git
     libsdl2-dev
     libsdl2-gfx-dev
 
-For example for Ubuntu use: sudo apt install cmake git libsdl2-dev libsdl2-gfx-dev
+For example for Ubuntu use:
+
+    sudo apt install cmake git libsdl2-dev libsdl2-gfx-dev
 
 Then:
 
     git clone https://bterwijn@bitbucket.org/bterwijn/virusgame.git
-    cd VirusGame/src
+    cd virusgame/src
     mkdir build
     cd build
     cmake ..

@@ -8,7 +8,6 @@
 const int SCREEN_FPS = 60;
 const int SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
 
-//int main()
 extern "C" int main(int argc, char* argv[])
 {
     srand(time(NULL)); // seed speudo random number generator 
@@ -16,9 +15,9 @@ extern "C" int main(int argc, char* argv[])
     
     Player player(mySDL.size()*0.5); // player
 
-    const int max_nr_viruses=20; // the evil viruses
-    int nr_viruses=0;
-    Virus viruses[max_nr_viruses];
+    const int max_nr_units=20; // the evil viruses
+    int nr_units=0;
+    Virus units[max_nr_units];
     double new_virus_chance=0.01;
     double new_virus_max_speed=3;
     
@@ -49,20 +48,20 @@ extern "C" int main(int argc, char* argv[])
         player.step(mySDL);
         player.draw(mySDL);
         
-        if (rand_0_1()<new_virus_chance && nr_viruses<max_nr_viruses) // create new virus
+        if (rand_0_1()<new_virus_chance && nr_units<max_nr_units) // create new virus
         {
             Coord window_size=mySDL.size();
             Coord pos=Coord(window_size.x * rand_0_1(),
                             window_size.y * rand_0_1());
             Coord speed=Coord(new_virus_max_speed * rand_m1_1(),
                               new_virus_max_speed * rand_m1_1());
-            viruses[nr_viruses]=Virus(pos,speed);
-            nr_viruses+=1;
+            units[nr_units]=Virus(pos,speed);
+            nr_units+=1;
         }
-        for (int i=0;i<nr_viruses;i++) // handle all viruses
+        for (int i=0;i<nr_units;i++) // handle all units
         {
-            viruses[i].step(mySDL);
-            viruses[i].draw(mySDL);
+            units[i].step(mySDL);
+            units[i].draw(mySDL);
         }
         
         SDL_RenderPresent(mySDL.renderer()); // update graphics window

@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{tcolorbox}
+
+\title{C++ Programmeermethoden Assignment5}
+\author{Bas Terwijn}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Assignment5 replaces the C++ Programmeermethoden exam because of
+ongoing online teaching due to Corona virus measures and will
+determine your grade for this course. In this assignment you are asked
+to modify and extend the VirusGame
+(\url{https://bitbucket.org/bterwijn/virusgame}) game.
+
+\section{Tasks}
+You are asked to do the following tasks but first install and run
+VirusGame on your computer using the installation instructions
+provided. Then read the documentation and code to get somewhat
+familiar with it.
+
+\subsection{Polymorphism}
+Currently in VirusGame.cpp all units are stored in a static array:
+
+\begin{tcolorbox}
+\begin{minted}{c++}
+Virus units[max_nr_units];
+\end{minted}
+\end{tcolorbox}
+
+But we want to be able to add other classes as units besides only the
+'Virus' class. In addition we want to handle the 'player' object as
+just another unit so the code get simpler. Therefore change the
+'units' array so that units of different classes can be added to it
+using polymophism.
+
+\subsection{Avoid Memory Leaks}
+With polymorphism you often will dynamically allocate memory when you
+instantiate objects using the 'new' keyword. Avoid memory leaks by
+de-allocating the memory when it is no longer needed.
+
+\subsection{RAII}
+With 'Resource Acquisition Is Initialization' (RAII)
+
+\url{https://en.cppreference.com/w/cpp/language/raii}
+
+you can make sure you, and possible other people that use your code,
+won't forget to release or de-allocate any resources such as
+memory. This is done by putting the code that releases the resource in
+a destructor that is automatically called when an object goes out of
+scope. Use RAII to release any resources, for example the memory allocated
+for units, in your code.
+
+\subsection{STL Containers}
+The modern Standard Template Library containers
+
+\url{http://www.cplusplus.com/reference/stl/}
+
+are the preferred data structures to use. Prefer std::vector over a
+static array [] as it can grow to arbitrary size, it knows its own
+size, doesn't decay to a pointer when passed to a function, and has
+only little additional overhead compared to a static array. Therefore
+replace any static array in your code (for example: Virus
+units[max\_nr\_units];) with a std::vector and prefer stl containers
+if you choose to add data structures.
+
+\subsection{STL Algorithms}
+The C++ Core Guidelines recommends using the standard library over
+'handcrafted code'
+
+\url{https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Res-lib}.
+
+Therefore use as much as possible the functions defined in the STL
+Algorithms Library
+
+\url{https://en.cppreference.com/w/cpp/algorithm}
+
+instead of for example raw for-loops. For a gentle introduction in STL
+Algorithms see:
+
+\url{https://www.youtube.com/watch?v=2olsGf6JIkU}
+
+\subsection{Avoid Duplicate Code}
+Avoid having duplicate code or said differently don't repeat yourself
+(DRY). The Virus::step() function is currently already a duplicate of
+Player::step(). Find a good way to avoid that duplication.
+
+\subsection{Your Own Creative Extension}
+The VirusGame is not finished. Extend it so it has interesting game
+play. Maybe the player has to avoid touching the viruses, or shoot
+them, or bump into them to bounce them into an anti-virus. Maybe also
+add some special effects like explosions or track marks. The more
+creative the better.
+
+\section{Grading}
+
+Polymorphism          1
+Memory leaks          1
+RAII                  1
+STL Containers        1
+STL Algorithms        1
+Avoid duplicate code  1
+Creative extension    4
+
+simple
+https://www.youtube.com/watch?v=O50qTuM5OT0
+
+duplicate code
+small functions
+good names
+const
+
+\section{Git repository}
+fork bitbucket private repo
+
+\section{Submission}
+deadline
+canvas
+
+\end{document}
