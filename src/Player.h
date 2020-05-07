@@ -47,7 +47,7 @@ public:
         { speed.y=-speed.y; }
     }
 
-    /*! Draws the Virus
+    /*! Draws the Player
       @param mySDL for the size of the window
      */
     void draw(MySDL& mySDL)
