@@ -1,6 +1,6 @@
 # VirusGame #
 A simple game build using the SDL2 graphics library. Use
-the cursur keys to move to escape/kill the viruses.
+the cursor keys to move to escape/kill the viruses.
 
 ![Alt text](VirusGame.png)
 
