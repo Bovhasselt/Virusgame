@@ -53,7 +53,7 @@ Then in Visual Studio Studio Community 2019 open the virusgame/src
 folder and build the project (F7) and run it (F5).
 
 
-## Documention
+## Documentation
 For documentation see the 
 [list of classes]( http://sbt.science.uva.nl/bterwijn/virusgame/doc/html/annotated.html "Doxygen documentation")
 
