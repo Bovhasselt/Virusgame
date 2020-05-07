@@ -55,3 +55,7 @@ folder and build the project (F7) and run it (F5).
 
 ## Author
 Bas Terwijn <<b.terwijn@uva.nl>>
+
+
+## Description of extension by student
+My extension ...
