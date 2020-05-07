@@ -1,8 +1,12 @@
 \documentclass[12pt]{article}
 
-\usepackage{hyperref}
 \usepackage{minted}
 \usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\newcommand*{\link}[2]{\href{#1}{\color{blue}\textbf{\textit{#2}}}}
+%\newcommand*{\link}[2]{ \href{#1} {  #2 } }
 
 \title{C++ Programmeermethoden Assignment5}
 \author{Bas Terwijn}
@@ -16,8 +20,9 @@ Assignment5 replaces the 2020 C++ Programmeermethoden exams because of
 ongoing online teaching due to Corona virus measures and will
 determine your grade for this course. In this assignment you are asked
 to modify and extend the
-\href{https://bitbucket.org/bterwijn/virusgame}{VirusGame} software.
-
+\link{https://bitbucket.org/bterwijn/virusgame} { VirusGame }
+software.
+     
 \section{Tasks}
 You are asked to do the following tasks but first install and run
 VirusGame on your computer using the installation instructions
@@ -45,7 +50,7 @@ instantiate objects using the ``new'' keyword. Avoid memory leaks by
 de-allocating the memory when it is no longer needed.
 
 \subsection{task3: RAII}
-With \href{https://en.cppreference.com/w/cpp/language/raii}{Resource
+With \link{https://en.cppreference.com/w/cpp/language/raii}{Resource
   Acquisition Is Initialization (RAII)} you can make sure you, and
 possible other people that later might use your code, won't forget to
 release or de-allocate any resources such as memory. This is done by
@@ -55,7 +60,7 @@ release any resources in your code, for example the memory allocated
 for units.
 
 \subsection{task4: STL Containers}
-The modern \href{http://www.cplusplus.com/reference/stl/}{Standard
+The modern \link{http://www.cplusplus.com/reference/stl/}{Standard
   Template Library containers} are the preferred data structures to
 use. Prefer std::vector over a static array [] as it can grow to
 arbitrary size, it knows its own size, doesn't decay to a pointer when
@@ -65,15 +70,15 @@ to a static array. Therefore replace any static array in your code
 prefer stl containers if you choose to add other data structures.
 
 \subsection{task5: STL Algorithms}
-\href{https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Res-lib}
+\link{https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines\#Res-lib}
 {ES.1 of C++ Core Guidelines} recommends using the standard library
 over ``handcrafted code''.  Therefore use as much as possible the
 functions defined in the
-\href{https://en.cppreference.com/w/cpp/algorithm} {STL Algorithms
+\link{https://en.cppreference.com/w/cpp/algorithm} {STL Algorithms
   Library} instead of for example raw for-loops. For a gentle
 introduction to STL Algorithms see the
-\href{https://www.youtube.com/watch?v=2olsGf6JIkU} {``105 STL Algorithms
-  in Less Than an Hour''} talk by Jonathan Boccara.
+\link{https://www.youtube.com/watch?v=2olsGf6JIkU} {``105 STL
+  Algorithms in Less Than an Hour''} talk by Jonathan Boccara.
 
 \subsection{task6: Avoid Duplicate Code}
 Avoid having duplicate code or expressions, or said differently, don't
@@ -112,7 +117,7 @@ level:
 
 Points will be deducted if your code is not ``simple'' such as
 described by Kate Gregory in her
-\href{https://www.youtube.com/watch?v=O50qTuM5OT0} {``Simplicity: not
+\link{https://www.youtube.com/watch?v=O50qTuM5OT0} {``Simplicity: not
   just for beginners''} talk, watch it!
 
 \section{Rules}
