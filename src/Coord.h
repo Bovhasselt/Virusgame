@@ -1,6 +1,9 @@
 #ifndef COORD_INCLUDED
 #define COORD_INCLUDED
 
+/*!
+  Coordinate x,y used for things like size, position and speed.
+ */
 struct Coord
 {
     double x,y;
