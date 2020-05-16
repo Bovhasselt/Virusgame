@@ -19,6 +19,10 @@ For example for Ubuntu use:
 
     sudo apt install cmake git libsdl2-dev libsdl2-gfx-dev
 
+For example for a Mac probably something like (run 'brew search sdl' to see which are available):
+
+    brew install cmake git sdl sdl_gfx
+
 Then:
 
     git clone https://bterwijn@bitbucket.org/bterwijn/virusgame.git
