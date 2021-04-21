@@ -43,30 +43,35 @@ just another unit so the code gets simpler. Therefore change the
 ``units'' array so that units of different types can be added to it
 using dynamic polymorphism.
 
-\subsection{task2: Avoid Memory Leaks}
-With polymorphism you often will dynamically allocate memory when you
-instantiate objects using the ``new'' keyword. Avoid memory leaks by
-de-allocating the memory when it is no longer needed.
+\subsection{task2: Avoid Duplicate Code}
+Avoid having duplicate code or expressions or said differently: don't
+repeat yourself (DRY). The Virus::step() function is currently already
+a duplicate of Player::step(). Find a good way to avoid that and other
+duplication.
 
 \subsection{task3: RAII}
-With \link{https://en.cppreference.com/w/cpp/language/raii}{Resource
+With dynamic polymorphism you will often have to dynamically allocate
+memory when you instantiate objects. This could be done using the
+``new'' keyword. However you will then have to remember to deallocate
+the memory using the ``delete'' keyword when it is no longer needed to
+avoid memory leaks. Alternatively with
+\link{https://en.cppreference.com/w/cpp/language/raii}{Resource
   Acquisition Is Initialization (RAII)} you can make sure you, and
-possible other people that later might use your code, won't forget to
-release or de-allocate any resources such as memory. This is done by
-putting the code that releases the resource in a destructor that is
-automatically called when an object goes out of scope. Use RAII to
-release any resources in your code, for example the memory allocated
-for units.
+other people that might use your code in the future, won't forget
+to release any resource such as memory. This is done by putting the code
+that releases the resource in a destructor that is automatically
+called when an object goes out of scope. Use RAII to make sure all
+resources are released automatically in your code.
 
 \subsection{task4: STL Containers}
 The modern \link{http://www.cplusplus.com/reference/stl/}{Standard
   Template Library containers} are the preferred data structures to
-use. Prefer std::vector over a static array [] as it can grow to
-arbitrary size, it knows its own size, doesn't decay to a pointer when
+use. Prefer std::vector over a static array as it can grow to
+arbitrary size, it knows its own size, it doesn't decay to a pointer when
 passed to a function, and has only little additional overhead compared
 to a static array. Therefore replace any static array in your code
-(for example: Virus units[max\_nr\_units];) with a std::vector and
-prefer stl containers if you choose to add other data structures.
+(for example: Virus units[max\_nr\_units]) with a std::vector and
+prefer STL containers if you choose to add other data structures.
 
 \subsection{task5: STL Algorithms}
 \link{https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines\#Res-lib}
@@ -79,22 +84,33 @@ introduction to STL Algorithms see the
 \link{https://www.youtube.com/watch?v=2olsGf6JIkU} {``105 STL
   Algorithms in Less Than an Hour''} talk by Jonathan Boccara.
 
-\subsection{task6: Avoid Duplicate Code}
-Avoid having duplicate code or expressions, or said differently, don't
-repeat yourself (DRY). The Virus::step() function is currently already
-a duplicate of Player::step(). Find a good way to avoid that and other
-duplication.
-
-\subsection{task7: Your Own Creative Extension}
+\subsection{task6: Your Own Creative Extension}
 The VirusGame is not yet finished. Extend it so it has interesting
 game play. Maybe the player has to avoid touching the viruses, or
 shoot them, or bump into them to bounce them into an anti-virus
 unit. Maybe also add some special effects like explosions or tire/skid
 marks or keep a score. The more creative the better, make it fun. You
 are free to change anything in the provided source code. Write a short
-description of your extension with references to source code at the
-bottom of the README.md file just so that I don't miss anything when
-grading your submission.
+description of your extension with references to your source code in
+the README.md file just so that I don't miss anything when grading
+your submission.
+
+\subsection{task7: SOLID code structure}
+As source code grows from a few hundred lines to many thousands of
+lines it tends to get harder and harder to change. This is one of the
+most difficult problems in software engineering. There are different
+schools of thought on how to alleviate this problem. One of these is
+using the SOLID principles that focuses on reducing code dependencies,
+for this see the \link{https://www.youtube.com/watch?v=Ntraj80qN2k}
+{``Breaking Dependencies: The SOLID Principles''} and
+\link{https://www.youtube.com/watch?v=WLDT1lDOsb4} {``Free Your
+  Functions!''} talks by Klaus Iglberger. Try to use the SOLID
+principles to decide how to structure your code. Describe the code
+structure decisions you made in relation to the SOLID principles in
+the README.md file with references to your source code. It is quiet
+hard to use the SOLID principles and this task mostly is for the top
+students so they can differentiate themselves, you will not get points
+for trivial decisions.
 
 \section{Grading}
 Your grade will follow from which tasks you complete to a satisfactory
@@ -103,27 +119,27 @@ level:
 \begin{tabular}{ |l|c| } 
   \hline
   \textbf{task}               &  \textbf{points}\\ \hline
-  task1: Polymorphism         &               2 \\
-  task2: Avoid Memory Leaks   &               1 \\
+  task1: Polymorphism         &               1 \\
+  task2: Avoid Duplicate Code &               1 \\
   task3: RAII                 &               1 \\
   task4: STL Containers       &               1 \\
-  task5: STL Algorithms       &               1 \\
-  task6: Avoid Duplicate Code &               1 \\
-  task7: Creative Extension   &               3 \\
+  task5: STL Algorithms       &               2 \\
+  task6: Creative Extension   &               3 \\
+  task7: SOLID code structure &               1 \\
   \hline
 \end{tabular}
 \end{center}
 
 Points will be deducted if your code is not ``simple'' such as
 described by Kate Gregory in her
-\link{https://www.youtube.com/watch?v=O50qTuM5OT0} {``Simplicity: not
+\link{https://www.youtube.com/watch?v=n0Ak6xtVXno} {``Simplicity: not
   just for beginners''} talk, watch it!
 
-\section{Rules}
+\section{Plagiarism}
 You are not allowed to share code with other students, if we detect
 (manually or with plagiarism checkers) that different submissions have
-similar structure I will have to report that to the examination
-board. See the UvA ``Fraude en plagiaat regeling'' for more details.
+similar structure we will have to report that to the examination
+board (see the UvA ``Fraude en plagiaat regeling'').
 
 Therefore if you optionally choose to fork the VirusGame git
 repository so you can use git to track and backup your changes, then
@@ -132,13 +148,18 @@ plagiarism if someone copies your code. Bitbucket allows you to make
 repositories private if you use your ``@uva.nl'' email address for
 your profile.
 
+If you base parts of your work on code written by others add
+references to the source. Code that is not written/designed by you
+will generally not earn you many points so don't rely on others too
+much.
+
 \section{Submission}
 Submit your code as a zip/tar of the whole VirusGame project before
-the deadline on May 31 23:59 on Canvas. Remove the compiled
+the deadline on May 28 2021 23:59 on Canvas. Remove the compiled
 executables and other derivatives that I don't need to compile your
-code in order to reduce the size. If you use other dependencies
-(additional libraries) describe them so I can easily install those
-before compiling your code. Double check that your submission contains
-all required files.
+code in order to reduce the size. If you add other dependencies
+(additional libraries) describe them in the README.md so I can easily
+install them. Double check that your submission contains all required
+files before you submit.
 
 \end{document}
