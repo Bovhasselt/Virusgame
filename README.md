@@ -62,7 +62,7 @@ For documentation see the
 [list of classes]( http://sbt.science.uva.nl/bterwijn/virusgame/doc/html/annotated.html "Doxygen documentation")
 
 ## Authors
-Bas Terwijn <b.terwijn@uva.nl>
+Bas Terwijn < <b.terwijn@uva.nl> >
 ...
 
 ## Description of extension by student
