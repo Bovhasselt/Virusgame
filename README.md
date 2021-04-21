@@ -61,8 +61,8 @@ folder and build the project (F7) and run it (F5).
 For documentation see the 
 [list of classes]( http://sbt.science.uva.nl/bterwijn/virusgame/doc/html/annotated.html "Doxygen documentation")
 
-## Author
-Bas Terwijn <<b.terwijn@uva.nl>>
+## Authors
+Bas Terwijn <b.terwijn@uva.nl>
 ...
 
 ## Description of extension by student
