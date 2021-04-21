@@ -4,7 +4,7 @@
 #include "MySDL.h"
 #include "Coord.h"
 
-/*! A Virus, be carefull
+/*! A Virus, be careful!
  */
 class Virus
 {
@@ -35,10 +35,8 @@ public:
     /*! Draws the Virus
       @param mySDL for the size of the window
      */
-    void draw(MySDL& mySDL)
-    {
-        filledCircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(0,255,0));
-    }
+    void draw(MySDL& mySDL) const
+    {   filledCircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(0,255,0)); }
     
 private:
     static const int radius=10;

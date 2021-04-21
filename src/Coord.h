@@ -26,7 +26,7 @@ struct Coord
     Coord operator*(double d) const
     { Coord n=*this; return n*=d; }
     
-    Coord operator-()
+    Coord operator-() const
     { Coord n=*this; n.x=-n.x; n.y=-n.y; return n; }
 };
 

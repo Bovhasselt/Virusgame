@@ -15,6 +15,6 @@ double rand_0_1()
 
 /*! Generate random number in range [-1;+1]  */
 double rand_m1_1()
-{  return rand_0_1()*2-1; };
+{  return rand_0_1()*2-1; }
 
 #endif

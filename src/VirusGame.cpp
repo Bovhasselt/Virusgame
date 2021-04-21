@@ -11,8 +11,9 @@ const int SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
 /*! @file
    The starting point of VirusGame, holds the main() function.
 */
-extern "C" int main(int argc, char* argv[])
+extern "C" int main()
 {
+    std::cout<<"Use the cursor keys to move around\n";
     srand(time(NULL));        // seed the speudo random number generator 
     MySDL mySDL("VirusGame"); // create an SDL graphics window
     
@@ -25,7 +26,7 @@ extern "C" int main(int argc, char* argv[])
     double new_virus_max_speed=3; // maximum speed of a new virus
     
     bool quit=false;
-    while (!quit) // the game loop
+    while (!quit) // the game loop, this loops has gotten large, better split it up in multiple functions?
     {
         int ticks_start=SDL_GetTicks();
         SDL_SetRenderDrawColor(mySDL.renderer(),0,0,0,255); // black background
@@ -51,7 +52,7 @@ extern "C" int main(int argc, char* argv[])
         player.step(mySDL);
         player.draw(mySDL);
         
-        if (rand_0_1()<new_virus_chance && nr_units<max_nr_units) // by chance create new virus
+        if (rand_0_1()<new_virus_chance && nr_units<max_nr_units) // by chance create a new virus
         {
             Coord window_size=mySDL.size();
             Coord pos  = Coord(window_size.x       * rand_0_1() ,  window_size.y       * rand_0_1() );

@@ -50,7 +50,7 @@ public:
     /*! Draws the Player
       @param mySDL for the size of the window
      */
-    void draw(MySDL& mySDL)
+    void draw(MySDL& mySDL) const
     {   aacircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(255,255,255)); }
     
 private:
