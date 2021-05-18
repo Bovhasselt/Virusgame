@@ -22,9 +22,9 @@ add_executable(VirusGame VirusGame.cpp)
 
 if (WIN32)
   target_link_libraries(VirusGame PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2::SDL2_gfx)
-  target_compile_options(VirusGame PRIVATE /W4 /WX) # warnings are errors
+  target_compile_options(VirusGame PRIVATE /W4)
 endif (WIN32)
 if (UNIX)
   target_link_libraries(VirusGame PRIVATE SDL2::Main SDL2::GFX)
-  target_compile_options(VirusGame PRIVATE -Wall -Wextra -pedantic -Werror) # warnings are errors
+  target_compile_options(VirusGame PRIVATE -Wall -Wextra -pedantic)
 endif (UNIX)

@@ -68,5 +68,5 @@ Bas Terwijn <<b.terwijn@uva.nl>>
 ## Description of extension by student
 My extension ...
 
-## Description of SOLID decisions by student
+## Description of decisions related to SOLID principles by student
 My code structure ...

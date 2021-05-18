@@ -57,11 +57,11 @@ the memory using the ``delete'' keyword when it is no longer needed to
 avoid memory leaks. Alternatively with
 \link{https://en.cppreference.com/w/cpp/language/raii}{Resource
   Acquisition Is Initialization (RAII)} you can make sure you, and
-other people that might use your code in the future, won't forget
-to release any resource such as memory. This is done by putting the code
+other people that might use your code in the future, won't forget to
+release any resource such as memory. This is done by putting the code
 that releases the resource in a destructor that is automatically
-called when an object goes out of scope. Use RAII to make sure all
-resources are released automatically in your code.
+called when an object goes out of scope. Use RAII in your code to make
+sure all resources are released automatically.
 
 \subsection{task4: STL Containers}
 The modern \link{http://www.cplusplus.com/reference/stl/}{Standard
@@ -91,18 +91,19 @@ shoot them, or bump into them to bounce them into an anti-virus
 unit. Maybe also add some special effects like explosions or tire/skid
 marks or keep a score. The more creative the better, make it fun. You
 are free to change anything in the provided source code. Write a short
-description of your extension with references to your source code in
-the README.md file just so that I don't miss anything when grading
-your submission.
+description of your extensions with references to your source code and
+maybe how I should use them during the game in the README.md file just
+so that I don't miss anything when grading your submission.
 
-\subsection{task7: SOLID code structure}
+\subsection{task7: SOLID principles}
 As source code grows from a few hundred lines to many thousands of
 lines it tends to get harder and harder to change. This is one of the
 most difficult problems in software engineering. There are different
 schools of thought on how to alleviate this problem. One of these is
-using the SOLID principles that focuses on reducing code dependencies,
-for this see the \link{https://www.youtube.com/watch?v=Ntraj80qN2k}
-{``Breaking Dependencies: The SOLID Principles''} and
+using the SOLID principles which focuses on reducing code
+dependencies. For the SOLID principles see the
+\link{https://www.youtube.com/watch?v=Ntraj80qN2k} {``Breaking
+  Dependencies: The SOLID Principles''} and
 \link{https://www.youtube.com/watch?v=WLDT1lDOsb4} {``Free Your
   Functions!''} talks by Klaus Iglberger. Try to use the SOLID
 principles to decide how to structure your code. Describe the code
@@ -125,15 +126,14 @@ level:
   task4: STL Containers       &               1 \\
   task5: STL Algorithms       &               2 \\
   task6: Creative Extension   &               3 \\
-  task7: SOLID code structure &               1 \\
+  task7: SOLID principles     &               1 \\
   \hline
 \end{tabular}
 \end{center}
 
-Points will be deducted if your code is not ``simple'' such as
-described by Kate Gregory in her
-\link{https://www.youtube.com/watch?v=n0Ak6xtVXno} {``Simplicity: not
-  just for beginners''} talk, watch it!
+Points will be deducted if your code is not ``simple'' as described by
+Kate Gregory in her \link{https://www.youtube.com/watch?v=n0Ak6xtVXno}
+{``Simplicity: not just for beginners''} talk, watch it!
 
 \section{Plagiarism}
 You are not allowed to share code with other students, if we detect
@@ -157,9 +157,9 @@ much.
 Submit your code as a zip/tar of the whole VirusGame project before
 the deadline on May 28 2021 23:59 on Canvas. Remove the compiled
 executables and other derivatives that I don't need to compile your
-code in order to reduce the size. If you add other dependencies
-(additional libraries) describe them in the README.md so I can easily
-install them. Double check that your submission contains all required
-files before you submit.
+code in order to reduce the size and complexity. If you add other
+dependencies (additional libraries) describe them in the README.md so
+I can easily install them. Double check that your submission contains
+all required files before you submit.
 
 \end{document}
