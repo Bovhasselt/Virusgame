@@ -19,7 +19,7 @@ For example for Ubuntu use:
 
     sudo apt install cmake git libsdl2-dev libsdl2-gfx-dev
 
-For example for a Mac probably something like (run 'brew search sdl' to see which are available):
+For a Mac probably something like (run 'brew search sdl2' to see which are available):
 
     brew install cmake git sdl2 sdl2_gfx
 
