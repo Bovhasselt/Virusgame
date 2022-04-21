@@ -21,7 +21,7 @@ For example for Ubuntu use:
 
 For example for a Mac probably something like (run 'brew search sdl' to see which are available):
 
-    brew install cmake git sdl sdl_gfx
+    brew install cmake git sdl2 sdl2_gfx
 
 Then:
 
