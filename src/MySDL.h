@@ -46,7 +46,7 @@ public:
     SDL_Renderer* renderer()       { return _renderer;    }
 
     /*! Gets the current size of the grapics window */
-    Coord size()
+    Coord size() const
     {
         int x,y;
         SDL_GetWindowSize(_window,&x,&y);
