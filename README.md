@@ -25,7 +25,7 @@ For a Mac probably something like (run 'brew search sdl2' to see which are avail
 
 Then:
 
-    git clone https://bterwijn@bitbucket.org/bterwijn/virusgame.git
+    git clone https://github.com/Bovhasselt/Virusgame.git
     cd virusgame/src
     mkdir build
     cd build
@@ -36,7 +36,7 @@ Then:
 ### Windows:
 
 Install [git](https://git-scm.com/download/win) and clone
-[VirusGame](https://bitbucket.org/bterwijn/virusgame/src/master).
+[VirusGame](https://github.com/Bovhasselt/Virusgame.git).
 
 Install [Visual Studio Studio Community
 2019](https://visualstudio.microsoft.com/) and in the Visual Studio
