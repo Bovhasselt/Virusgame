@@ -1,0 +1,3 @@
+/Users/Bo/Desktop/School/Jaar3/C++ ProgrammeerMethoden/4. Virus Game/virusgame/src/build/CMakeFiles/VirusGame.dir
+/Users/Bo/Desktop/School/Jaar3/C++ ProgrammeerMethoden/4. Virus Game/virusgame/src/build/CMakeFiles/edit_cache.dir
+/Users/Bo/Desktop/School/Jaar3/C++ ProgrammeerMethoden/4. Virus Game/virusgame/src/build/CMakeFiles/rebuild_cache.dir

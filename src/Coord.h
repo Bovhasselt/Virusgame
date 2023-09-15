@@ -6,28 +6,56 @@
  */
 struct Coord
 {
-    double x,y;
+    double x, y;
 
-    Coord() : x{0},y{0}
-    {}
-    
-    Coord(double x,double y) : x{x},y{y}
-    {}
+    Coord() : x{0}, y{0}
+    {
+    }
 
-    Coord& operator+=(const Coord& c)
-    { x+=c.x; y+=c.y; return *this; }
-    
-    Coord operator+(const Coord& c) const
-    { Coord n=*this; return n+=c; }
+    Coord(double x, double y) : x{x}, y{y}
+    {
+    }
 
-    Coord& operator*=(double d)
-    { x*=d; y*=d; return *this; }
+    Coord &operator+=(const Coord &c)
+    {
+        x += c.x;
+        y += c.y;
+        return *this;
+    }
+
+    Coord operator+(const Coord &c) const
+    {
+        Coord n = *this;
+        return n += c;
+    }
+
+    Coord &operator*=(double d)
+    {
+        x *= d;
+        y *= d;
+        return *this;
+    }
 
     Coord operator*(double d) const
-    { Coord n=*this; return n*=d; }
-    
+    {
+        Coord n = *this;
+        return n *= d;
+    }
+
     Coord operator-() const
-    { Coord n=*this; n.x=-n.x; n.y=-n.y; return n; }
+    {
+        Coord n = *this;
+        n.x = -n.x;
+        n.y = -n.y;
+        return n;
+    }
+
+    double distance(const Coord &c) const
+    {
+        double dx = x - c.x;
+        double dy = y - c.y;
+        return sqrt(dx * dx + dy * dy);
+    }
 };
 
 #endif

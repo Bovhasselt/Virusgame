@@ -1,5 +1,5 @@
-#ifndef VIRUS_INCLUDED
-#define VIRUS_INCLUDED
+#ifndef POWERUP_INCLUDED
+#define POWERUP_INCLUDED
 
 #include "MySDL.h"
 #include "Coord.h"
@@ -7,10 +7,10 @@
 
 /*! A Virus, be careful!
  */
-class Virus : public Unit
+class PowerUp : public Unit
 {
 public:
-  Virus()
+  PowerUp()
   {
   }
 
@@ -18,7 +18,7 @@ public:
     @param pos start position
     @param speed start speed
    */
-  Virus(Coord pos, Coord speed, int radius=10) : Unit{pos, radius, speed}
+  PowerUp(Coord pos, Coord speed, int radius = 7) : Unit{pos, radius, speed}
   {
   }
 
@@ -27,7 +27,7 @@ public:
    */
   void draw(MySDL &mySDL) const
   {
-    filledCircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(0, 255, 0));
+    filledCircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(255, 0, 0));
   }
 };
 

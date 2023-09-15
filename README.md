@@ -63,10 +63,18 @@ For documentation see the
 
 ## Authors
 Bas Terwijn <<b.terwijn@uva.nl>>
+Bo van Hasselt <<bovhasselt@gmail.com>>
 ...
 
-## Description of extension by student
-My extension ...
+## Description of extension on documentation by Bo van Hasselt
+I have added: 
+- termination of the game when the player comes in contact with a virus
+- clicking on a virus kills it
+- the player can get bigger or smaller with the keys 'b' and 's' respectively
+- red units that earn you points when collected
+- a score bar
+You get points for  - surviving time, the bigger you are the more points
+                    - killing viruses
+                    - collecting reds
 
-## Description of decisions related to SOLID principles by student
-My code structure ...
+
